@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Typography, Button } from "@material-ui/core";
 import { add, parseJSON, isPast } from "date-fns";
@@ -59,6 +59,12 @@ const A2HS: React.FC = () => {
   const { pwaInstall, supported, isInstalled } = useReactPWAInstall();
   const [bannerClicked, setBannerClicked] = useState(false);
 
+  useEffect(() => {
+    if (isInstalled()) {
+      window.resizeTo(370, 640);
+    }
+  }, [isInstalled]);
+
   const recordInstallAttempt = () => {
     localStorage.setItem("installAttemptDate", JSON.stringify(new Date()));
     if (!bannerClicked) {
@@ -76,7 +82,7 @@ const A2HS: React.FC = () => {
 
   const handleInstallClick = () => {
     pwaInstall({
-      title: "Install Pomodoro Timer",
+      title: "Install Pomo Timer",
       logo,
       features: (
         <ul style={{ paddingLeft: "20px" }}>
