@@ -1,0 +1,315 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Settings tests renders correctly 1`] = `
+<body
+  style="padding-right: 0px; overflow: hidden;"
+>
+  <div
+    aria-hidden="true"
+  >
+    <button
+      aria-label="settings"
+      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall MuiIconButton-edgeStart"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiIconButton-label"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root makeStyles-icon-1"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
+            transform="scale(1.2, 1.2)"
+          />
+        </svg>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+  <div
+    class="MuiDialog-root"
+    role="presentation"
+    style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px;"
+  >
+    <div
+      aria-hidden="true"
+      class="MuiBackdrop-root"
+      style="opacity: 1; webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+    />
+    <div
+      data-test="sentinelStart"
+      tabindex="0"
+    />
+    <div
+      class="MuiDialog-container MuiDialog-scrollPaper"
+      role="none presentation"
+      style="webkit-transform: none; transform: none; webkit-transition: -webkit-transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms; transition: transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;"
+      tabindex="-1"
+    >
+      <div
+        class="MuiPaper-root MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm MuiDialog-paperFullScreen MuiPaper-elevation24 MuiPaper-rounded"
+        role="dialog"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-center"
+        >
+          <div
+            class="MuiBox-root MuiBox-root-2"
+          >
+            <div
+              class="MuiBox-root MuiBox-root-3"
+            >
+              <button
+                aria-label="close settings"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeSmall MuiIconButton-edgeStart"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root makeStyles-icon-1"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiBox-root MuiBox-root-4"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+                id="work"
+              >
+                Work: 
+                25
+                :00
+              </p>
+            </div>
+            <div
+              class="MuiBox-root MuiBox-root-5"
+            >
+              <span
+                class="MuiSlider-root MuiSlider-colorPrimary"
+                id="workSlider"
+              >
+                <span
+                  class="MuiSlider-rail"
+                />
+                <span
+                  class="MuiSlider-track"
+                  style="left: 0%; width: 40.67796610169491%;"
+                />
+                <input
+                  type="hidden"
+                  value="25"
+                />
+                <span
+                  aria-label="work"
+                  aria-orientation="horizontal"
+                  aria-valuemax="60"
+                  aria-valuemin="1"
+                  aria-valuenow="25"
+                  class="MuiSlider-thumb MuiSlider-thumbColorPrimary"
+                  data-index="0"
+                  role="slider"
+                  style="left: 40.67796610169491%;"
+                  tabindex="0"
+                />
+              </span>
+            </div>
+            <div
+              class="MuiBox-root MuiBox-root-11"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+                id="shortbreak"
+              >
+                Short break: 
+                5
+                :00
+              </p>
+            </div>
+            <div
+              class="MuiBox-root MuiBox-root-12"
+            >
+              <span
+                class="MuiSlider-root MuiSlider-colorPrimary"
+                id="shortBreakSlider"
+              >
+                <span
+                  class="MuiSlider-rail"
+                />
+                <span
+                  class="MuiSlider-track"
+                  style="left: 0%; width: 13.793103448275861%;"
+                />
+                <input
+                  type="hidden"
+                  value="5"
+                />
+                <span
+                  aria-label="short break"
+                  aria-orientation="horizontal"
+                  aria-valuemax="30"
+                  aria-valuemin="1"
+                  aria-valuenow="5"
+                  class="MuiSlider-thumb MuiSlider-thumbColorPrimary"
+                  data-index="0"
+                  role="slider"
+                  style="left: 13.793103448275861%;"
+                  tabindex="0"
+                />
+              </span>
+            </div>
+            <div
+              class="MuiBox-root MuiBox-root-13"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+                id="longbreak"
+              >
+                Long break: 
+                20
+                :00
+              </p>
+            </div>
+            <div
+              class="MuiBox-root MuiBox-root-14"
+            >
+              <span
+                class="MuiSlider-root MuiSlider-colorPrimary"
+                id="longBreakSlider"
+              >
+                <span
+                  class="MuiSlider-rail"
+                />
+                <span
+                  class="MuiSlider-track"
+                  style="left: 0%; width: 32.20338983050848%;"
+                />
+                <input
+                  type="hidden"
+                  value="20"
+                />
+                <span
+                  aria-label="long break"
+                  aria-orientation="horizontal"
+                  aria-valuemax="60"
+                  aria-valuemin="1"
+                  aria-valuenow="20"
+                  class="MuiSlider-thumb MuiSlider-thumbColorPrimary"
+                  data-index="0"
+                  role="slider"
+                  style="left: 32.20338983050848%;"
+                  tabindex="0"
+                />
+              </span>
+            </div>
+            <div
+              class="MuiBox-root MuiBox-root-15"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-body1"
+                id="rounds"
+              >
+                Rounds: 
+                4
+              </p>
+            </div>
+            <div
+              class="MuiBox-root MuiBox-root-16"
+            >
+              <span
+                class="MuiSlider-root MuiSlider-colorPrimary"
+                id="roundsSlider"
+              >
+                <span
+                  class="MuiSlider-rail"
+                />
+                <span
+                  class="MuiSlider-track"
+                  style="left: 0%; width: 42.857142857142854%;"
+                />
+                <input
+                  type="hidden"
+                  value="4"
+                />
+                <span
+                  aria-label="rounds"
+                  aria-orientation="horizontal"
+                  aria-valuemax="8"
+                  aria-valuemin="1"
+                  aria-valuenow="4"
+                  class="MuiSlider-thumb MuiSlider-thumbColorPrimary"
+                  data-index="0"
+                  role="slider"
+                  style="left: 42.857142857142854%;"
+                  tabindex="0"
+                />
+              </span>
+            </div>
+            <div
+              class="MuiBox-root MuiBox-root-17"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Save
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <div
+              class="MuiBox-root MuiBox-root-18"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label"
+                >
+                  Reset Defaults
+                </span>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-test="sentinelEnd"
+      tabindex="0"
+    />
+  </div>
+</body>
+`;

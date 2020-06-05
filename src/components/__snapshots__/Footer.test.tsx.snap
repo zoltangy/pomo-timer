@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer tests that snapshots match 1`] = `
+<DocumentFragment>
+  <div
+    class="makeStyles-root-1"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-justify-xs-center"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <hr
+          class="MuiDivider-root MuiDivider-middle"
+        />
+      </div>
+      <div
+        class="MuiGrid-root makeStyles-signature-2 MuiGrid-container MuiGrid-item MuiGrid-justify-xs-center MuiGrid-grid-xs-12"
+      >
+        <img
+          alt="signature"
+          height="44"
+          src="sign.png"
+          width="50"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
