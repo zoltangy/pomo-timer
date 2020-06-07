@@ -12,4 +12,4 @@ Features:
 - Works offline, also detects when offline and will not try to serve outside links, instead notifies the user gracefully.
 - When installed on desktop it resizes to a convinient gadget format.
 
-To view the deployed version, check https://zoltangy.github.io/pomodoro-timer/
+To view the deployed version, check https://zoltangy.github.io/pomo-timer/
