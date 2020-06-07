@@ -96,7 +96,7 @@ const A2HS: React.FC = () => {
     })
       .then()
       .catch()
-      .finally(recordInstallAttempt());
+      .finally(() => recordInstallAttempt());
   };
 
   return (

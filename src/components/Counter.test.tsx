@@ -32,12 +32,12 @@ describe("Counter tests", () => {
   it("displays correct values as time passes by", () => {
     const play = jest.spyOn(window.HTMLMediaElement.prototype, "play");
     expect(play).not.toHaveBeenCalled();
-    const { getByText, getByLabelText, getByRole } = renderWithProviders(<Counter />);
+    const { getByText, getByRole } = renderWithProviders(<Counter />);
     getByText("WORK");
     getByText("25:00");
     getByRole("button", { name: "Reset" });
     expect(play).not.toHaveBeenCalled();
-    fireEvent.click(getByLabelText("start"));
+    fireEvent.click(getByRole("button", { name: "start" }));
     expect(play).toHaveBeenCalledTimes(1);
     jest.advanceTimersByTime(1000);
     getByText("WORK");
@@ -55,21 +55,21 @@ describe("Counter tests", () => {
 
   it("starts/pauses the counter when the button is pressed", () => {
     const play = jest.spyOn(window.HTMLMediaElement.prototype, "play");
-    const { getByText, getByLabelText } = renderWithProviders(<Counter />);
+    const { getByText, getByRole } = renderWithProviders(<Counter />);
     getByText("WORK");
     getByText("25:00");
-    fireEvent.click(getByLabelText("start"));
+    fireEvent.click(getByRole("button", { name: "start" }));
     expect(play).toHaveBeenCalledTimes(1);
     jest.advanceTimersByTime(5000);
     getByText("WORK");
     getByText("24:55");
     expect(play).toHaveBeenCalledTimes(1);
-    fireEvent.click(getByLabelText("pause"));
+    fireEvent.click(getByRole("button", { name: "pause" }));
     jest.advanceTimersByTime(5000);
     getByText("WORK");
     getByText("24:55");
     expect(play).toHaveBeenCalledTimes(1);
-    fireEvent.click(getByLabelText("start"));
+    fireEvent.click(getByRole("button", { name: "start" }));
     expect(play).toHaveBeenCalledTimes(2);
     jest.advanceTimersByTime(5000);
     getByText("WORK");
@@ -78,17 +78,36 @@ describe("Counter tests", () => {
   });
 
   it("resets the counter correctly when reset is clicked", () => {
-    const { getByText, getByLabelText, getByRole } = renderWithProviders(<Counter />);
+    const { getByText, getByRole } = renderWithProviders(<Counter />);
     getByText("WORK");
     getByText("25:00");
-    fireEvent.click(getByLabelText("start"));
+    fireEvent.click(getByRole("button", { name: "start" }));
     jest.advanceTimersByTime(1501000);
     getByText("BREAK");
     getByText("04:59");
-    getByLabelText("pause");
+    getByRole("button", { name: "pause" });
     fireEvent.click(getByRole("button", { name: "Reset" }));
     getByText("WORK");
     getByText("25:00");
-    getByLabelText("start");
+    getByRole("button", { name: "start" });
+  });
+
+  it("stops at the end correctly", () => {
+    const play = jest.spyOn(window.HTMLMediaElement.prototype, "play");
+    const { getByText, getByRole } = renderWithProviders(<Counter />, {
+      work: 1,
+      shortBreak: 1,
+      longBreak: 1,
+      rounds: 2,
+      timeLeft: 240,
+    });
+    getByText("WORK");
+    getByText("01:00");
+    fireEvent.click(getByRole("button", { name: "start" }));
+    jest.advanceTimersByTime(245000);
+    getByText("LONG BREAK");
+    getByText("00:00");
+    getByRole("button", { name: "start" });
+    expect(play).toHaveBeenCalledTimes(5);
   });
 });

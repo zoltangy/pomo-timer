@@ -50,10 +50,16 @@ const getActivity = (
   rounds: number,
   timeLeft: number
 ): { name: Activity; remaining: number; duration: number } => {
-  if (timeLeft < longBreak * 60) return { name: "LONG BREAK", remaining: timeLeft, duration: longBreak * 60 };
+  if (timeLeft < longBreak * 60) {
+    return { name: "LONG BREAK", remaining: timeLeft, duration: longBreak * 60 };
+  }
+
   let rem = (timeLeft - longBreak * 60) % (work * 60 + shortBreak * 60);
-  if (rem < work * 60 || timeLeft === createAppState({ work, shortBreak, longBreak, rounds }).timeLeft)
+
+  if (rem < work * 60 || timeLeft === createAppState({ work, shortBreak, longBreak, rounds }).timeLeft) {
     return { name: "WORK", remaining: rem, duration: work * 60 };
+  }
+
   return { name: "BREAK", remaining: rem - work * 60, duration: shortBreak * 60 };
 };
 
@@ -84,13 +90,17 @@ const Counter: React.FC = () => {
   const noSleep = useRef(new NoSleep());
 
   useEffect(() => {
+    startPause(false);
+  }, [work, shortBreak, longBreak, rounds]);
+
+  useEffect(() => {
     let myTimer: NodeJS.Timeout;
 
     function count() {
       if (activity.remaining === 0) {
         playSound();
         if (timeLeft === 0) {
-          setActive(false);
+          startPause(false);
         } else {
           dispatch(timeDecrease());
         }
@@ -100,21 +110,22 @@ const Counter: React.FC = () => {
     }
 
     if (active) {
-      myTimer = setTimeout(count, 1000);
+      myTimer = setInterval(count, 1000);
     }
     return function cleanup() {
       clearInterval(myTimer);
     };
   });
 
-  const startPause = () => {
+  const startPause = (start?: boolean) => {
     setActive((prevActive) => {
-      if (prevActive === false) {
+      if (start || (start === undefined && prevActive === false)) {
         noSleep.current.enable();
+        return true;
       } else {
         noSleep.current.disable();
+        return false;
       }
-      return !prevActive;
     });
   };
 
@@ -148,7 +159,12 @@ const Counter: React.FC = () => {
         </Typography>
       </div>
       <Grid container direction="column" alignContent="center" className={classes.buttonsGrid}>
-        <IconButton size="small" color="inherit" aria-label={active ? "pause" : "start"} onClick={startPause}>
+        <IconButton
+          size="small"
+          color="inherit"
+          aria-label={active ? "pause" : "start"}
+          onClick={() => startPause()}
+        >
           {active ? (
             <PauseCircleOutlineOutlinedIcon color="primary" className={classes.icon} />
           ) : (

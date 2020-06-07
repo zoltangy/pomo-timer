@@ -1,6 +1,6 @@
 ## Pomo Timer
 
-Customizable pomodoro timer using React, Redux and Material-UI. Tested using React testing library with Jest.
+Customizable pomodoro timer written in Typescript using React, Redux and Material-UI. Tested using Jest and Cypress, both with the [Testing library](https://testing-library.com) extensions.
 
 Features:
 
