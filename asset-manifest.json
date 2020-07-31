@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.js": "/pomo-timer/static/js/main.942d263f.chunk.js",
-    "main.js.map": "/pomo-timer/static/js/main.942d263f.chunk.js.map",
+    "main.js": "/pomo-timer/static/js/main.7bd9d61f.chunk.js",
+    "main.js.map": "/pomo-timer/static/js/main.7bd9d61f.chunk.js.map",
     "runtime-main.js": "/pomo-timer/static/js/runtime-main.818756cb.js",
     "runtime-main.js.map": "/pomo-timer/static/js/runtime-main.818756cb.js.map",
     "static/css/2.c7e9fab3.chunk.css": "/pomo-timer/static/css/2.c7e9fab3.chunk.css",
-    "static/js/2.afb319a9.chunk.js": "/pomo-timer/static/js/2.afb319a9.chunk.js",
-    "static/js/2.afb319a9.chunk.js.map": "/pomo-timer/static/js/2.afb319a9.chunk.js.map",
+    "static/js/2.a063697e.chunk.js": "/pomo-timer/static/js/2.a063697e.chunk.js",
+    "static/js/2.a063697e.chunk.js.map": "/pomo-timer/static/js/2.a063697e.chunk.js.map",
     "index.html": "/pomo-timer/index.html",
-    "precache-manifest.8a198a017f5ddf7176e370959a0c7aac.js": "/pomo-timer/precache-manifest.8a198a017f5ddf7176e370959a0c7aac.js",
+    "precache-manifest.1ef000bbf8f39f58b22455c063e41a80.js": "/pomo-timer/precache-manifest.1ef000bbf8f39f58b22455c063e41a80.js",
     "service-worker.js": "/pomo-timer/service-worker.js",
     "static/css/2.c7e9fab3.chunk.css.map": "/pomo-timer/static/css/2.c7e9fab3.chunk.css.map",
-    "static/js/2.afb319a9.chunk.js.LICENSE.txt": "/pomo-timer/static/js/2.afb319a9.chunk.js.LICENSE.txt",
+    "static/js/2.a063697e.chunk.js.LICENSE.txt": "/pomo-timer/static/js/2.a063697e.chunk.js.LICENSE.txt",
     "static/media/index.css": "/pomo-timer/static/media/roboto-latin-900italic.ebf6d164.woff2",
     "static/media/sound.mp3": "/pomo-timer/static/media/sound.f3e1419d.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.818756cb.js",
     "static/css/2.c7e9fab3.chunk.css",
-    "static/js/2.afb319a9.chunk.js",
-    "static/js/main.942d263f.chunk.js"
+    "static/js/2.a063697e.chunk.js",
+    "static/js/main.7bd9d61f.chunk.js"
   ]
 }
