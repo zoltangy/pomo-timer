@@ -77,6 +77,7 @@ const playSound = () => {
 
 const Counter: React.FC = () => {
   const [active, setActive] = useState(false);
+  const [noSleepOn, setNoSleepOn] = useState(false);
   const work = useSelector<AppState, number>((state) => state.work);
   const shortBreak = useSelector<AppState, number>((state) => state.shortBreak);
   const longBreak = useSelector<AppState, number>((state) => state.longBreak);
@@ -88,6 +89,17 @@ const Counter: React.FC = () => {
   const classes = useStyles({ activity: activity.name });
 
   const noSleep = useRef(new NoSleep());
+
+  useEffect(() => {
+    if (active && !noSleepOn) {
+      noSleep.current.enable();
+      setNoSleepOn(true);
+    }
+    if (!active && noSleepOn) {
+      noSleep.current.disable();
+      setNoSleepOn(false);
+    }
+  }, [active, noSleepOn]);
 
   useEffect(() => {
     startPause(false);
@@ -120,10 +132,8 @@ const Counter: React.FC = () => {
   const startPause = (start?: boolean) => {
     setActive((prevActive) => {
       if (start || (start === undefined && prevActive === false)) {
-        noSleep.current.enable();
         return true;
       } else {
-        noSleep.current.disable();
         return false;
       }
     });

@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent } from "@testing-library/react";
+import { fireEvent, act } from "@testing-library/react";
 import { renderWithProviders } from "../test-util";
 import Counter, { getActivity } from "./Counter";
 
@@ -92,7 +92,7 @@ describe("Counter tests", () => {
     getByRole("button", { name: "start" });
   });
 
-  it("stops at the end correctly", () => {
+  it("stops at the end correctly", async () => {
     const play = jest.spyOn(window.HTMLMediaElement.prototype, "play");
     const { getByText, getByRole } = renderWithProviders(<Counter />, {
       work: 1,
@@ -104,7 +104,13 @@ describe("Counter tests", () => {
     getByText("WORK");
     getByText("01:00");
     fireEvent.click(getByRole("button", { name: "start" }));
-    jest.advanceTimersByTime(245000);
+    await act(
+      () =>
+        new Promise((resolve) => {
+          jest.advanceTimersByTime(245000);
+          resolve();
+        })
+    );
     getByText("LONG BREAK");
     getByText("00:00");
     getByRole("button", { name: "start" });
