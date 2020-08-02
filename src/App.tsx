@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Box } from "@material-ui/core";
+import Div100vh from "react-div-100vh";
 
 import InfoLink from "./components/InfoLink";
 import Settings from "./components/Settings";
@@ -10,13 +11,9 @@ import ProgressBar from "./components/ProgressBar";
 import A2HS from "./components/A2HS";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    justifyContent: "center",
-  },
   center: {
     width: "320px",
-    minHeight: "100vh",
+    minHeight: "100%",
     position: "relative",
     paddingBottom: "80px", // footer height
     display: "flex",
@@ -35,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 export default function App() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <Div100vh style={{ display: "flex", justifyContent: "center", minHeight: "100rvh" }}>
       <div className={classes.center}>
         <div className={classes.content}>
           <Grid container spacing={0} justify="space-between" className={classes.grid}>
@@ -50,6 +47,6 @@ export default function App() {
         <Footer />
         <A2HS />
       </div>
-    </div>
+    </Div100vh>
   );
 }
