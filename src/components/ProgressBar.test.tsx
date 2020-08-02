@@ -5,16 +5,6 @@ import ProgressBar from "./ProgressBar";
 describe("ProgressBar tests", () => {
   beforeEach(() => {
     jest.useFakeTimers();
-
-    //should not be needed with newer jsdom
-    global.document.createRange = () => ({
-      setStart: () => {},
-      setEnd: () => {},
-      commonAncestorContainer: {
-        nodeName: "BODY",
-        ownerDocument: document,
-      },
-    });
   });
 
   it("should render initial state correctly", () => {
