@@ -23,7 +23,7 @@
     "react-dom": "^16.13.1",
     "react-pwa-install": "^1.0.10",
     "react-redux": "^7.2.1",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "redux": "^4.0.5",
     "typeface-roboto": "0.0.75",
     "typescript": "~3.7.2",
